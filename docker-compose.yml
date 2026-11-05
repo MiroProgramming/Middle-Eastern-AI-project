@@ -1,0 +1,9 @@
+services:
+  cuppy:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data   # memories, reminders, Google login - survives restarts
+    ports:
+      - "8080:8080"        # only needed for incoming WhatsApp (put HTTPS in front, see README)

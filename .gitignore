@@ -1,0 +1,10 @@
+# Secrets and personal data - never commit these
+.env
+data/
+client_secret*.json
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
